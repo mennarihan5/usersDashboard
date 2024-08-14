@@ -1,0 +1,9 @@
+<div *ngFor="let user of users | paginate: { id: 'users', itemsPerPage: 6, currentPage: page }">
+  <div (click)="viewUser(user.id)">
+    <p>{{ user.first_name }} {{ user.last_name }}</p>
+    <img [src]="user.avatar" alt="{{ user.first_name }}'s avatar">
+  </div>
+</div>
+
+
+<pagination-controls id="users" (pageChange)="page = $event"></pagination-controls>

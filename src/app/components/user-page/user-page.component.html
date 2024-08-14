@@ -1,0 +1,6 @@
+<div *ngIf="user">
+  <p>{{ user.first_name }} {{ user.last_name }}</p>
+  <p>{{ user.email }}</p>
+  <img [src]="user.avatar" alt="{{ user.first_name }}'s avatar">
+  <button (click)="goBack()">Back to Users List</button>
+</div>
