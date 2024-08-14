@@ -19,6 +19,8 @@ export class UsersListComponent implements OnInit  {
 
   users: User[] = [];
   page: number = 1;
+  totalItems: number = 0;
+  itemsPerPage: number = 6;
 
   ngOnInit() {
     this.fetchUsers();
@@ -28,10 +30,15 @@ export class UsersListComponent implements OnInit  {
       this.apiService.get<User[]>(`https://reqres.in/api/users?page=${this.page}`)
         .subscribe((response:any) => {
           console.log(response);
-          this.users.push(...response.data);
+          this.users = response.data;
+          this.totalItems = response.total;
         })
     }
-    viewUser(userId: number) {
-      this.router.navigate(['/users', userId]);
-    }
+  viewUser(userId: number) {
+    this.router.navigate(['/users', userId]);
+  }
+  onPageChange(page: number) {
+    this.page = page;
+    this.fetchUsers();
+  }
 }

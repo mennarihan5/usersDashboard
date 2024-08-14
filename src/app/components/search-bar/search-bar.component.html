@@ -1,1 +1,10 @@
-<p>search-bar works!</p>
+<div>
+  <input
+   type="number"
+   placeholder="Search.."
+   min="1"
+   class="search-input"
+   (keyup)="onSearch($event)">
+</div>
+<div class="user-not-found" *ngIf="userNotFound">User not found.</div>
+
