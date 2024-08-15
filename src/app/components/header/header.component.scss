@@ -1,3 +1,10 @@
+@import '../../../styles.scss';
+
 .header-container {
-  background-color: red;
+  background-color: $light-grey;
+  @include dFlex(row, space-between, center);
+  padding: 1.5%;
+}
+.title {
+  font-size: 1.25rem;
 }

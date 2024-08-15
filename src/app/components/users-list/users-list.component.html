@@ -1,9 +1,19 @@
-<div *ngFor="let user of users | paginate: { id: 'users', itemsPerPage: itemsPerPage, currentPage: page, totalItems: totalItems }">
-  <div (click)="viewUser(user.id)">
-    <p>{{ user.first_name }} {{ user.last_name }}</p>
-    <img [src]="user.avatar" alt="{{ user.first_name }}'s avatar">
+
+<div class="users-list-container">
+  <div *ngFor="let user of users | paginate: { id: 'users', itemsPerPage: itemsPerPage, currentPage: page, totalItems: totalItems};
+  let last = last"
+  [ngClass]="{'no-border': last}"
+  class="user-container">
+    <div class="user" (click)="viewUser(user.id)">
+      <p class="id">{{user.id}}</p>
+      <div class="avatar-container">
+        <img class="user-avatar" [src]="user.avatar" alt="{{ user.first_name }}'s avatar">
+      </div>
+      <p class="user-name">{{ user.first_name }} {{ user.last_name }}</p>
+      <p class="user-email">{{ user.email }}</p>
+    </div>
   </div>
 </div>
 
 
-<pagination-controls id="users" (pageChange)="onPageChange($event)"></pagination-controls>
+<pagination-controls class="pagination" id="users" (pageChange)="onPageChange($event)"></pagination-controls>

@@ -1,5 +1,33 @@
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+// GLOBAL
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
+
+// COLORS
+$white: #fff;
+$black: #000;
+$light-grey: #f2f2f2;
+$light-grey2: #e0e0e0;;
+$medium-grey: #7f7f7f;
+$dark-grey: #ababab;
+$light-beige: #f0efeb;
+$green: #25a244;
+$red: #d00000;
+
+// VARIABLES
+@mixin dFlex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+
+
+

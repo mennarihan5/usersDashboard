@@ -1,0 +1,26 @@
+@import '../../../styles.scss';
+
+.search-input {
+  border-radius: 0.5rem;
+  padding: 2%;
+  width: 20rem;
+  height: 2rem;
+  color: $black;
+  font-size: 1rem;
+  font-weight: 400;
+  border: none;
+  outline: none;
+}
+.user-not-found {
+  padding: 2%;
+  color: $red;
+  font-weight: 600;
+}
+.search-container input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.search-container input[type="number"] {
+  -moz-appearance: textfield;
+}
