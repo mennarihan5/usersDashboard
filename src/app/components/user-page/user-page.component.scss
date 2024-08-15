@@ -1,0 +1,40 @@
+@import '../../../styles.scss';
+
+.user {
+  background-color: $light-grey;
+  @include dFlex (column, center, center);
+  width: 50%;
+  padding: 3%;
+  border-radius: 0.5rem;
+  margin: 2% auto;
+  height: auto;
+}
+.avatar-wrapper {
+  width: 50%;
+}
+.avatar-wrapper, .name , .email {
+  margin-bottom: 4%;
+  color: $medium-grey;
+  cursor: pointer;
+}
+.avatar {
+  width: 100%;
+  border-radius: 50%;
+}
+.name {
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: $black;
+}
+.email {
+
+}
+.back-btn {
+  border-radius: 1.5rem;
+  border: none;
+  background-color: $dark-grey;
+  padding: 2.5% 4%;
+  cursor: pointer;
+  font-weight: 500;
+  color: $white;
+}

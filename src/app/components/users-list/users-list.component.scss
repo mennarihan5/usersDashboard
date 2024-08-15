@@ -1,3 +1,52 @@
+@import '../../../styles.scss';
+
 .users-list-container {
-  background-color: yellow;
+  margin: 2% auto;
+  border-radius: 0.5rem;
+  background-color: $light-grey;
+  width: 85%;
+}
+.user-container {
+  border-bottom: 1px solid $light-grey2;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    background-color: $light-beige;
+  }
+}
+.user {
+  @include dFlex(row, space-between, center);
+  cursor: pointer;
+  padding: 1% 0;
+}
+.no-border {
+  border-bottom: none !important;
+}
+.id {
+  padding: 0 2%;
+}
+.user-name, .id, .avatar-container  {
+  color: $medium-grey;
+  font-weight: 500;
+}
+.user-name {
+  width: 20%;
+  text-align: left;
+}
+.avatar-container {
+  width: 4%;
+  margin-left: 0;
+}
+.user-avatar {
+  width: 100%;
+  border-radius: 50%;
+}
+.user-email {
+  padding: 0 2%;
+  width: 20%;
+  text-align: left;
+}
+.pagination {
+  font-weight: 500;
+  @include dFlex(row, center, center);
+  margin: 4% 0;
 }

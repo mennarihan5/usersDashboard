@@ -1,3 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
 .users-list-container {
-  background-color: yellow;
+  margin: 2% auto;
+  border-radius: 0.5rem;
+  background-color: #f2f2f2;
+  width: 85%;
+}
+
+.user-container {
+  border-bottom: 1px solid #e0e0e0;
+  transition: all 0.5s ease-in-out;
+}
+.user-container:hover {
+  background-color: #f0efeb;
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 1% 0;
+}
+
+.no-border {
+  border-bottom: none !important;
+}
+
+.id {
+  padding: 0 2%;
+}
+
+.user-name, .id, .avatar-container {
+  color: #7f7f7f;
+  font-weight: 500;
+}
+
+.user-name {
+  width: 20%;
+  text-align: left;
+}
+
+.avatar-container {
+  width: 4%;
+  margin-left: 0;
+}
+
+.user-avatar {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.user-email {
+  padding: 0 2%;
+  width: 20%;
+  text-align: left;
+}
+
+.pagination {
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 4% 0;
 }/*# sourceMappingURL=users-list.component.css.map */
